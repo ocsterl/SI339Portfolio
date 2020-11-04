@@ -1,79 +1,167 @@
-body {
-    font-family: "Lucia Grande", sans-serif;
-    background-color: #d3d3d3;
-    color: #a9a9a9
+html{
+    scroll-behavior: smooth;
 }
 
-h1 {
+body{
+    font-family: 'Lucia Grande', sans-serif;
+    font-size: 18px; 
+    margin: 0;
+    padding: 0;
+}
+  
+h1{
+    font-size: 48px;
+    line-height: 1;
+    padding: 50px 0;
     text-align: center;
-    font-size: 64px;
 }
-
-h2 {
+  
+h2{
     font-size: 32px;
-    text-shadow: 5px 5px 2px #000000;
+    line-height: 1.5;
 }
 
-p {
-    font-size: 24px;
-    padding-top: 20px;
+nav li{
+    display: inline;
+    padding-right: 20px;
 }
 
-img {
-    display: block;
-    width: 525px;
-    margin-left: auto;
-    margin-right: auto;
+nav a{
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
 }
 
-div {
-    min-height: 150px;
-    padding: 25px;
+nav a:hover{
+    text-decoration: underline;
 }
 
-#introduction {
-    text-align: right;
-    background-color: #FF0000;
-}
-
-#history {
-    text-align: left;
-    background-color: #686161;
-    color: #FFFFFF;
-}
-
-#now {
-    text-align: right;
-    background-color: #FFFFFF;
-}
-
-footer p {
-    text-align: right;
-    padding-top: 0px;
-    padding-left: 0px;
-    padding-bottom: 10px;
-    padding-right: 10px;
-}
-
-.pics {
-    min-height: 600px;
-    min-width: 600px
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+.skip a{
+    background: white;
+    left: 0;
+    padding: 6px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+    /*Your code here*/
+    position: absolute;
+    top: -40px;
+  
   }
   
-.pics > img{
-    border: 10px #FF0000 solid;
-    margin: 10px;
-    width: 300px;
+.skip a:focus{
+    top: 0px;
+}
+
+*.focus{
+    border: 2px solid black;
+}
+
+nav{
+    background-color: #ddd;
+    padding: 25px 0;
+    text-align: left;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    padding-top: 30px;
+    text-align: center;
+}
+
+.container{
+    grid-template-columns: 1fr 5fr 1fr;
+    display: grid;
+    grid-template-rows: auto auto auto auto auto;
+    grid-row-gap: 15px;
+}
+
+header{
+    background-attachment: fixed;    
+    background-position: center;  
+    background-repeat: no-repeat;
+    background-size: cover;       
+    color: white;
+    height: 400px;                
+  
+    grid-column: 1 / -1; 
+    grid-row: 1 / auto;
+}
+  
+header p{
+    color: white;
+    font-size: 24px;
+    padding: 0 100px;
+    text-align: center;
+}
+  
+
+.intro, .history, .now, .year{ 
+    grid-column: 2 / span 1;
+}
+
+.intro-image, .history-image, .now-image, .year-image{ 
+    overflow: hidden;
+    grid-column: 1 / -1;
+    max-height: 700px;
+    max-width: 500px;
+}
+  
+.intro, .intro-image{
+    grid-row: 2 /span 1;
+}
+  
+.history, .history-image{
+    grid-row: 3 /span 1;
+}
+  
+.now, .now-image{
+    grid-row: 4 /span 1;
+}
+
+.year, .year-image{
+    grid-row: 5 /span 1;
+}
+  
+.text-block{
+    background-color: rgba(247, 92, 92, 0.8);
+    border: 10px solid black;
+    padding: 30px;
+    align-self: center;
   }
-
-  header{
-    background: #fff;
-    border-bottom: 3px solid #686161;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  
+  
+@media all and (min-width: 800px){
+    nav{
+      padding: 30px 0px;
+      text-align: right;
+      align-self: center;
+    }
+  
+    .container{
+      grid-template-columns: 50px auto 500px auto 50px;
+      grid-template-rows: 400px 400px 400px 400px 400px;
+    }
+  
+    .intro, .history, .now-image, .year-image{
+      grid-column: 3 /span 2;
+    }
+  
+    .intro-image, .history-image, .now, .year{
+      grid-column: 2 /span 2;
+    }
+  }
+  
+@media screen and (prefers-reduced-motion: reduce){
+    html{
+        scroll-behavior: auto; 
+    }
+    .skip a{
+        -webkit-transition: none; 
+        transition: none;        
+    }
+    header{
+      background-attachment: initial;
+    }
   }
