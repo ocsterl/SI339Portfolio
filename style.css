@@ -54,3 +54,16 @@ footer p {
     padding-bottom: 10px;
     padding-right: 10px;
 }
+
+.gallery{
+    min-height: 600px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .gallery > img{
+    border: 10px #FF0000 solid;
+    margin: 10px;
+    width: 300px;
+  }
