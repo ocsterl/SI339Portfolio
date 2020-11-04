@@ -7,8 +7,6 @@ body{
     font-size: 18px; 
     margin: 0;
     padding: 0;
-    background-color: #d3d3d3;
-    color: #a9a9a9
 }
   
 h1{
@@ -21,8 +19,6 @@ h1{
 h2{
     font-size: 32px;
     line-height: 1.5;
-    text-shadow: 5px 5px 2px #000000;
-    text-align:center;
 }
 
 nav li{
@@ -108,8 +104,8 @@ header p{
 .intro-image, .history-image, .now-image, .year-image{ 
     overflow: hidden;
     grid-column: 1 / -1;
-    grid-row: 2 / -1;
-    max-height: 500px;
+    max-height: 700px;
+    max-width: 500px;
 }
   
 .intro, .intro-image{
@@ -160,6 +156,10 @@ header p{
 @media screen and (prefers-reduced-motion: reduce){
     html{
         scroll-behavior: auto; 
+    }
+    .skip a{
+        -webkit-transition: none; 
+        transition: none;        
     }
     header{
       background-attachment: initial;
