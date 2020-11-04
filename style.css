@@ -1,3 +1,7 @@
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     font-family: 'Lucia Grande', sans-serif; /* Test for this*/
     margin: 0;
@@ -5,176 +9,137 @@ body{
     font-size: 24px; 
     background-color: #d3d3d3;
     color: #a9a9a9
-  }
+}
   
 h1{
     font-size: 64px;
-    text-align: center;
     line-height: 2;
+    padding: 50px 0;
+    text-align: center;
 }
   
 h2{
     font-size: 32px;
-    text-align: center;
-    padding: 5px;
+    line-height: 1.5;
     text-shadow: 5px 5px 2px #000000;
 }
-  
-p {
-    font-size: 24px;
-    padding: 0 30px;
+
+nav li{
+    display: inline;
+    padding-right: 20px;
+}
+
+nav a{
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav a:hover{
+    text-decoration: underline;
 }
   
 *:focus{
     border: 2px solid black;
 }
-  
-img {
-    display: block;
-    width: 525px;
-    margin-left: auto;
-    margin-right: auto;
+
+nav{
+    background-color: #ddd;
+    padding: 25px 0;
+    text-align: left;
 }
 
 footer{
     background-color: black;
     color: white;
-    padding: 30px;
+    padding-top: 30px;
+    text-align: center;
+}
+
+.container{
+    grid-template-columns: 1fr 5fr 1fr;
+    display: grid;
+    grid-template-rows: auto auto auto auto auto;
+    grid-row-gap: 15px;
+}
+
+header{
+    background-attachment: fixed;    
+    background-position: center;  
+    background-repeat: no-repeat;
+    background-size: cover;       
+    color: white;
+    height: 400px;                
+  
+    grid-column: 1 / -1; 
+    grid-row: 1 / auto;   
+}
+  
+header p{
+    color: white;
+    font-size: 24px;
+    padding: 0 100px;
     text-align: center;
 }
   
-
-.pics{
-    min-height: 500px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+.intro, .history, .now{
+    grid-column: 2 /span 1;
+  
 }
   
-.team {
-    margin: 12px;
-    background: #FF0000;
-    border-radius: 7px;
-    padding: 0 0 50px 0;
-    flex-basis: 400px;
-    flex-wrap: wrap;
+.intro-image, .history-image, .now-image{
+    overflow: hidden;
+    grid-column: 1 / -1;
+    max-height: 700px;
 }
   
-.team > header{
-    background: #d3d3d3;
-    border: 2px solid #FF0000;
-    padding: 20px 0;
-    border-radius: 7px 7px 0 0;
+.intro, .intro-image{
+    grid-row: 1 /span 1;
 }
   
-.team > ul{
-    list-style: none;
-    padding: 0;
+.history, .history-image{
+    grid-row: 2 /span 1;
 }
   
-.team > ul li {
-    width: 90%;
-    margin: 20px auto;
+.now, .now-image{
+    grid-row: 3 /span 1;
 }
   
-  /* Gallery! */
-.gallery{
-    min-height: 600px;
-    /*Your code here again.*/
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
+.text-block{
+    background-color: rgba(247, 92, 92, 0.8);
+    border: 10px solid black;
+    padding: 30px;
+    align-self: center;
+  }
   
-.gallery > img{
-    border: 10px #d3d3d3 solid;
-    margin: 10px;
-    width: 300px;
-}
   
-  /* Navbar */
-header{
-    background: #fff;
-    border-bottom: 3px solid #000000;
-    /*Your  code here again.*/
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-  
-.nav_links{
-    /*Your code here again.*/
-    display: flex;
-    flex-direction: column;
-}
-  
-.nav_item a{
-    color: black;
-    text-decoration: none;
-}
-  
-.nav_item a:hover, a:focus{
-    color: #91221a;
-    text-decoration: underline;
-    -webkit-text-decoration-style: dotted;
-            text-decoration-style: dotted;
-}
-  
-    @media screen and (min-width: 850px){
-  
-    /* Cards! */
-    .pricing {
-      flex-direction: row;
-      flex-wrap: wrap;
-    }
-    
-    .card {
-      /*Your  code here again.*/
-      display: flex;
-      flex-basis: 225px;
-      flex-direction: column;
-      flex-wrap: wrap;
+@media all and (min-width: 800px){
+    nav{
+      padding: 30px 0px;
+      text-align: right;
+      align-self: center;
     }
   
-    .card_big{
-      -webkit-transform: scaleX(1.12);
-              transform: scaleX(1.12);
+    .container{
+      grid-template-columns: 50px auto 500px auto 50px;
+      grid-template-rows: 400px 400px 400px 400px 400px;
     }
   
-    /* Navbar */
+    .intro, .history, .now{
+      grid-column: 3 /span 2;
+    }
+  
+    .intro-image, .history-image, .now{
+      grid-column: 2 /span 2;
+    }
+  }
+  
+@media screen and (prefers-reduced-motion: reduce){
+    html{
+        scroll-behavior: auto; 
+    }
     header{
-      /*Your code here again.*/  
-      display:flex;
-      flex-direction: row;
-      justify-content: space-between;
-    }
-  
-    .nav_links{
-      /*Your code here again.*/
-      flex-direction: row;
-    }
-  
-    .nav_item a{
-      padding: 10px;
+      background-attachment: initial;
     }
   }
-  
-  @media print { 
-    .pics {
-      flex-basis: 200px;
-    }
-
-    body {
-      background-image: none;
-    }
-    .pricing{
-      align-items: flex-start;
-    }
-    .pics{
-      display: none;
-    }
-  }
-  
  
