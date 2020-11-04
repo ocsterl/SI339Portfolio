@@ -3,17 +3,15 @@ html{
 }
 
 body{
-    font-family: 'Lucia Grande', sans-serif; /* Test for this*/
+    font-family: 'Lucia Grande', sans-serif;
+    font-size: 18px; 
     margin: 0;
     padding: 0;
-    font-size: 24px; 
-    background-color: #d3d3d3;
-    color: #a9a9a9
 }
   
 h1{
-    font-size: 64px;
-    line-height: 2;
+    font-size: 48px;
+    line-height: 1;
     padding: 50px 0;
     text-align: center;
 }
@@ -21,8 +19,6 @@ h1{
 h2{
     font-size: 32px;
     line-height: 1.5;
-    text-shadow: 5px 5px 2px #000000;
-    text-align:center;
 }
 
 nav li{
@@ -39,8 +35,25 @@ nav a{
 nav a:hover{
     text-decoration: underline;
 }
+
+.skip a{
+    background: white;
+    left: 0;
+    padding: 6px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+    /*Your code here*/
+    position: absolute;
+    top: -40px;
   
-*:focus{
+  }
+  
+.skip a:focus{
+    top: 0px;
+}
+
+*.focus{
     border: 2px solid black;
 }
 
@@ -73,7 +86,7 @@ header{
     height: 400px;                
   
     grid-column: 1 / -1; 
-    grid-row: 1 / auto;   
+    grid-row: 1 / auto;
 }
   
 header p{
@@ -83,41 +96,32 @@ header p{
     text-align: center;
 }
   
-.intro, .history, .now{
-    grid-column: 2 /span 1;
+
+.intro, .history, .now, .year{ 
+    grid-column: 2 / span 1;
 }
 
-.intro{
-    background-color: #FF0000;
-    color: #000000;
-}
-
-.history{
-    background-color: #a9a9a9;
-    color: #000000;
-}
-
-.now{
-    background-color: #d3d3d3;
-    color: #000000;
-}
-
-.intro-image, .history-image, .now-image{
+.intro-image, .history-image, .now-image, .year-image{ 
     overflow: hidden;
     grid-column: 1 / -1;
     max-height: 700px;
+    max-width: 500px;
 }
   
 .intro, .intro-image{
-    grid-row: 1 /span 1;
-}
-  
-.history, .history-image{
     grid-row: 2 /span 1;
 }
   
-.now, .now-image{
+.history, .history-image{
     grid-row: 3 /span 1;
+}
+  
+.now, .now-image{
+    grid-row: 4 /span 1;
+}
+
+.year, .year-image{
+    grid-row: 5 /span 1;
 }
   
 .text-block{
@@ -140,11 +144,11 @@ header p{
       grid-template-rows: 400px 400px 400px 400px 400px;
     }
   
-    .intro, .history, .now{
+    .intro, .history, .now-image, .year-image{
       grid-column: 3 /span 2;
     }
   
-    .intro-image, .history-image, .now{
+    .intro-image, .history-image, .now, .year{
       grid-column: 2 /span 2;
     }
   }
@@ -152,6 +156,10 @@ header p{
 @media screen and (prefers-reduced-motion: reduce){
     html{
         scroll-behavior: auto; 
+    }
+    .skip a{
+        -webkit-transition: none; 
+        transition: none;        
     }
     header{
       background-attachment: initial;
