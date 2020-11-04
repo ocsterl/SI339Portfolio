@@ -73,7 +73,7 @@ header{
     height: 400px;                
   
     grid-column: 1 / -1; 
-    grid-row: 1 / auto;   
+    grid-row: 1 / auto;
 }
   
 header p{
@@ -83,29 +83,30 @@ header p{
     text-align: center;
 }
   
-.intro, .history, .now{
-    grid-column: 2 /span 1;
-}
 
 .intro{
     background-color: #e6dbdb;
-    color: #000000;
+    color: #FFFFFF;
+    grid-column: 1 / span 1;
 }
 
 .history{
     background-color: #a9a9a9;
     color: #000000;
+    grid-column: 2 /span 1;
 }
 
 .now{
     background-color: #d3d3d3;
     color: #000000;
+    grid-column: 3 /span 1;
 }
 
 .intro-image, .history-image, .now-image{
     overflow: hidden;
     grid-column: 1 / -1;
-    max-height: 700px;
+    grid-row: 2 / -1;
+    max-height: 500px;
 }
   
 .intro, .intro-image{
