@@ -22,6 +22,7 @@ h2{
     font-size: 32px;
     line-height: 1.5;
     text-shadow: 5px 5px 2px #000000;
+    text-align:center;
 }
 
 nav li{
@@ -84,9 +85,23 @@ header p{
   
 .intro, .history, .now{
     grid-column: 2 /span 1;
-  
 }
-  
+
+.intro{
+    background-color: #FF0000;
+    color: #000000;
+}
+
+.history{
+    background-color: #a9a9a9;
+    color: #000000;
+}
+
+.now{
+    background-color: #d3d3d3;
+    color: #000000;
+}
+
 .intro-image, .history-image, .now-image{
     overflow: hidden;
     grid-column: 1 / -1;
