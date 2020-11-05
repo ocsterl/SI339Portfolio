@@ -27,7 +27,7 @@ nav li{
 }
 
 nav a{
-    color: black;
+    color: #FFFFFF;
     font-weight: bold;
     text-decoration: none;
 }
@@ -43,11 +43,9 @@ nav a:hover{
     -webkit-transition: top 1s ease-out;
     transition: top 1s ease-out;
     z-index: 1;
-    /*Your code here*/
     position: absolute;
     top: -40px;
-  
-  }
+}
   
 .skip a:focus{
     top: 0px;
@@ -58,7 +56,7 @@ nav a:hover{
 }
 
 nav{
-    background-color: #ddd;
+    background-color: #FF0000;
     padding: 25px 0;
     text-align: left;
 }
@@ -129,7 +127,7 @@ header p{
     border: 10px solid black;
     padding: 30px;
     align-self: center;
-  }
+}
   
   
 @media all and (min-width: 800px){
@@ -151,7 +149,7 @@ header p{
     .intro-image, .history-image, .now, .year{
       grid-column: 2 /span 2;
     }
-  }
+}
   
 @media screen and (prefers-reduced-motion: reduce){
     html{
@@ -164,4 +162,4 @@ header p{
     header{
       background-attachment: initial;
     }
-  }
+}
