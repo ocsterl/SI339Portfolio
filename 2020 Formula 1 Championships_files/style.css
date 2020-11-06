@@ -142,35 +142,41 @@ header p{
 .team-ar,.team-at, .team-h, .team-f, .team-mc, .team-mr, .team-rp, .team-rb, .team-r, .team-w {
     min-height: 500px;
     display: flex;
+    /* flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; */
+    /* background-color: #FFFFFF; */
     margin: 12px;
-    /* background: #c5c3c3; */
+    background: #c5c3c3;
     border-radius: 7px;
     padding: 0 0 50px 0;
+    flex-basis: 200px;
+    flex-wrap: wrap;
 }
 
 
 header > h3{
     color: #FF0000;
-    text-align: center;
+    background-image: url("imgs/alphatauri.jpeg");
 }
 
-.teams > ul{
+.team-ar, .team-at, .team-h, .team-f, .team-mc, .team-mr, .team-rp, .team-rb, .team-r, .team-w  > ul{
     list-style: none;
     padding: 0;
-    text-align: center;
 }
-#team-ar, #team-at, #team-h, #team-f, #team-mc, #team-mr, #team-rp, #team-rb, #team-r, #team-w > ul li{
+
+.team-ar, .team-at, .team-h, .team-f, .team-mc, .team-mr, .team-rp, .team-rb, .team-r, .team-w > ul li{
     width: 90%;
     margin: 20px auto;
-    text-align: center;
 }
 
 
-/* #team-ar, #team-at, #team-h, #team-f, #team-mc, #team-mr, #team-rp, #team-rb, #team-r, #team-w > h3{
+.team-ar, .team-at, .team-h, .team-f, .team-mc, .team-mr, .team-rp, .team-rb, .team-r, .team-w > h3{
     font-size: 4em;
     color: #FF0000;
     text-align: center;
-} */
+}
 
 .gallery{
     min-height: 600px;
