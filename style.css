@@ -165,12 +165,15 @@ header > h3{
     text-align: center;
 }
 
-
-/* #team-ar, #team-at, #team-h, #team-f, #team-mc, #team-mr, #team-rp, #team-rb, #team-r, #team-w > h3{
-    font-size: 4em;
-    color: #FF0000;
-    text-align: center;
-} */
+#ar-img, #at-img, #h-img, #f-img, #mc-img, #mr-img, #rp-img, #rb-img, #r-img, #w-img{
+    border: 1px solid rgb(238, 0, 0);
+    border-radius: 4px;
+    padding: 5px;
+}
+  
+#ar-img, #at-img, #h-img, #f-img, #mc-img, #mr-img, #rp-img, #rb-img, #r-img, #w-img :hover {
+    box-shadow: 0 0 2px 1px rgba(247, 70, 70, 0.5);
+}
 
 .gallery{
     min-height: 600px;
@@ -184,6 +187,33 @@ header > h3{
     border: 10px #FF0000 solid;
     margin: 10px;
     width: 300px;
+}
+
+#standings {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    border: solid black 2px;
+  }
+  
+#standings td, #standings th {
+    border: 1px solid black;
+    padding: 8px;
+}
+  
+#standings tr:nth-child(even){
+    background-color: #f2f2f2;}
+  
+#standings tr:hover{
+    background-color: #ddd;
+}
+  
+#standings th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #FF0000;
+    color: white;
 }
 
 @media all and (min-width: 800px){
