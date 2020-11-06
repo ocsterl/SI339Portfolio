@@ -4,26 +4,31 @@ html{
 
 body{
     font-family: 'Lucia Grande', sans-serif;
-    font-size: 18px; 
+    font-size: 16px; 
     margin: 0;
     padding: 0;
 }
   
 h1{
-    font-size: 48px;
-    line-height: 1;
-    padding: 50px 0;
+    font-size: 2em;
     text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
   
 h2{
-    font-size: 32px;
-    line-height: 1.5;
+    font-size: 1.5em;
+    text-align: center;
+    padding:5px
 }
 
 nav li{
     display: inline-block;
     padding-right: 20px;
+}
+
+p {
+    padding: 0 30px;
 }
 
 nav a{
@@ -59,7 +64,7 @@ nav a:hover{
 nav{
     background-color: #FF0000;
     padding: 25px 0;
-    text-align: left;
+    text-align: center;
 }
 
 footer{
@@ -69,68 +74,134 @@ footer{
     text-align: center;
 }
 
-.container{
-    grid-template-columns: 1fr 5fr 1fr;
-    display: grid;
-    grid-template-rows: auto auto auto auto auto;
-    grid-row-gap: 15px;
+header{   
+    color: black;             
+    max-width: 100vw;
+    grid-column: 1 / -1; 
 }
 
-header{
-    background-attachment: fixed;    
-    background-position: center;  
-    background-repeat: no-repeat;
-    background-size: cover;       
-    color: white;
-    height: 400px;                
-  
-    grid-column: 1 / -1; 
-    grid-row: 1 / auto;
-}
-  
 header p{
     color: black;
     font-size: 24px;
     padding: 0 100px;
     text-align: center;
 }
-  
 
-.intro, .history, .now, .year{ 
-    grid-column: 2 / span 1;
-}
-
-.intro-image, .history-image, .now-image, .year-image{ 
+.intro-text-block{
+    padding-top: 10px;
+    background-color: rgba(73, 72, 72, 0.8);
+    border: 10px solid #cccbcb;
+    color: #FFFFFF;
+    padding: 0px 20px 20px 20px;
+    align-items: center;
     overflow: hidden;
-    grid-column: 1 / -1;
-    max-height: 400px;
-    max-width: 400px;
-}
-  
-.intro, .intro-image{
-    grid-row: 2 /span 1;
-}
-  
-.history, .history-image{
-    grid-row: 3 /span 1;
-}
-  
-.now, .now-image{
-    grid-row: 4 /span 1;
 }
 
-.year, .year-image{
-    grid-row: 5 /span 1;
+.container{
+    grid-template-columns: 1fr;
+    grid-template-rows: 400px 400px 400px 400px;
 }
-  
-.text-block{
-    background-color: rgba(247, 92, 92, 0.8);
-    border: 10px solid black;
-    padding: 30px;
+
+#history-text-block{ 
+    background-color: rgba(209, 201, 201, 0.8);
+    border: 10px solid #252424; 
+    padding: 20px; 
     align-self: center;
 }
+
+#now-text-block{ 
+    background-color:rgba(73, 72, 72, 0.8);
+    border: 10px solid #fa0000; 
+    color: #FFFFFF;
+    padding: 20px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#f2020-text-block{ 
+    background-color: rgba(250, 250, 250, 0.8);
+    border: 10px solid #2e2c2c; 
+    padding: 20px; 
+    align-self: center;
+}
+
+.flex-container{ 
+    display: flex;
+    background-color: #302e2e;
+}
+
+.flex-container>div {
+    background-color: #FF0000; 
+    color:#FFFFFF;
+}
   
+.team-ar,.team-at, .team-h, .team-f, .team-mc, .team-mr, .team-rp, .team-rb, .team-r, .team-w {
+    min-height: 500px;
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #FFFFFF;
+    background-image: url("imgs/alphatauri.jpeg");
+}
+
+.team-ar, .team-at, .team-h, .team-f, .team-mc, .team-mr, .team-rp, .team-rb, .team-r, .team-w {
+    margin: 12px;
+    background: #c5c3c3;
+    border-radius: 7px;
+    padding: 0 0 50px 0;
+    flex-basis: 200px;
+    flex-wrap: wrap;
+}
+
+
+header > h3{
+    color: #FF0000;
+    background-image: url("imgs/alphatauri.jpeg");
+}
+
+.team-ar, .team-at, .team-h, .team-f, .team-mc, .team-mr, .team-rp, .team-rb, .team-r, .team-w  > ul{
+    list-style: none;
+    padding: 0;
+}
+
+.team-ar, .team-at, .team-h, .team-f, .team-mc, .team-mr, .team-rp, .team-rb, .team-r, .team-w > ul li{
+    width: 90%;
+    margin: 20px auto;
+}
+
+/* .team-ar, .team-at, .team-h, .team-f, .team-mc, .team-mr, .team-rp, .team-rb, .team-r, .team-w > button{
+    width: 90%;
+    height: 40px;
+    border: 0;
+    margin-left: 12px;
+    border-radius: 7px;
+    background: #FF0000;
+    color: white;
+    font-size: 1em;
+} */
+
+.team-ar, .team-at, .team-h, .team-f, .team-mc, .team-mr, .team-rp, .team-rb, .team-r, .team-w > h3{
+    font-size: 4em;
+    color: white;
+    text-align: center;
+}
+
+.gallery{
+    min-height: 600px;
+    /*Your code here again.*/
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
   
+.gallery > img{
+    border: 10px #FF0000 solid;
+    margin: 10px;
+    width: 300px;
+}
+
 @media all and (min-width: 800px){
     nav{
       padding: 30px 0px;
@@ -139,18 +210,31 @@ header p{
     }
   
     .container{
-      grid-template-columns: 50px auto 500px auto 50px;
-      grid-template-rows: 400px 400px 400px 400px 400px;
+      grid-template-columns: 1fr;
+      grid-template-rows: 400px 400px 400px 400px;
     }
   
-    .intro, .history, .now-image, .year-image{
-      grid-column: 3 /span 2;
+    .intro, .history, .now, .year{
+      grid-column: 2 /span 1;
     }
   
-    .intro-image, .history-image, .now, .year{
-      grid-column: 2 /span 2;
+    .intro-image, .history-image, .now-image, .year-image{
+      grid-column: 3/span 1;
     }
+
+    .teams{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .team-ar, .team-at, .team-h, .team-f, .team-mc, .team-mr, .team-rp, .team-rb, .team-r, .team-w{
+        display: flex;
+        flex-basis: 225px;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }   
 }
+
   
 @media screen and (prefers-reduced-motion: reduce){
     html{
